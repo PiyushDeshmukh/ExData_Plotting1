@@ -1,4 +1,4 @@
-hpc <- read.csv('../household_power_consumption.txt', na.strings = '?', sep = ';', nrows = -1)
+hpc <- read.csv('../household_power_consumption.txt', na.strings = '?', sep = ';', nrows = 70000)
 hpc['Date'] <-lapply(hpc['Date'], strptime, "%d/%m/%Y")
 hpc <- hpc[(hpc$Date >= '2007-02-01' & hpc$Date <= '2007-02-02'),]
 
